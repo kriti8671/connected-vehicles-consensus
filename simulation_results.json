@@ -1,0 +1,30 @@
+[
+    {
+        "configuration": {
+            "N": 4,
+            "f": 1,
+            "message_loss_rate": 0.1,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "average_rounds": 1.0,
+        "99th_percentile_rounds": 1.0,
+        "all_rounds": [
+            1
+        ]
+    },
+    {
+        "configuration": {
+            "N": 7,
+            "f": 2,
+            "message_loss_rate": 0.05,
+            "initial_ratio": 0.7,
+            "epsilon": 0.001
+        },
+        "average_rounds": 1.0,
+        "99th_percentile_rounds": 1.0,
+        "all_rounds": [
+            1
+        ]
+    }
+]

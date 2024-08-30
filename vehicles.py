@@ -30,7 +30,7 @@ class Vehicle:
         # Store the received state keyed by the sender's ID
         self.received_states[sender_id] = state
 
-    def update_state(self, total_vehicles):
+    def update_state(self, total_vehicles, f):
 
         # Step 1: Gather all received states including the vehicle's own state
         all_states = [self.current_state] + list(self.received_states.values())
@@ -43,7 +43,7 @@ class Vehicle:
             f"Vehicle {self.vehicle_id} after filling missing states: {all_states}")
 
         # Step 3: Sort and trim the list of states to remove outliers
-        trimmed_states = self.trim_states(all_states)
+        trimmed_states = self.trim_states(all_states, f)
         print(f"Vehicle {self.vehicle_id} trimmed states: {trimmed_states}")
 
         # Step 4: Update the state to the average of the trimmed states
@@ -53,11 +53,15 @@ class Vehicle:
         # Clear the received states for the next round
         self.received_states.clear()
 
-    def trim_states(self, all_states):
+    # def trim_states(self, all_states):
+    #     sorted_states = sorted(all_states)  # Sorting
+    #     trimmed_states = sorted_states[1:-1]  # remove first and last
+    #     return trimmed_states
 
-        sorted_states = sorted(all_states)  # Sorting
-
-        trimmed_states = sorted_states[1:-1]  # remove first and last
+    def trim_states(self, all_states, f):
+        sorted_states = sorted(all_states)  # Sort all states
+        # Remove the smallest `f` and largest `f` values
+        trimmed_states = sorted_states[f:-f]
         return trimmed_states
 
     def decide_final_output(self):
