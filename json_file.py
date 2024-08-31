@@ -1,5 +1,6 @@
 import json
 
+
 def save_results_to_json(data, filename):
     """
     Save simulation results to a JSON file.
@@ -11,6 +12,7 @@ def save_results_to_json(data, filename):
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)
     print(f"Results saved to {filename}")
+
 
 def load_results_from_json(filename):
     """
