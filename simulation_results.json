@@ -1,17 +1,15 @@
 [
     {
         "configuration": {
-            "N": 8,
+            "N": 5,
             "f": 1,
-            "message_loss_rate": 0.4,
-            "initial_ratio": 0.5,
+            "message_loss_rate": 0.3,
+            "initial_ratio": 0.7,
             "epsilon": 0.01
         },
-        "average_rounds": 1.3333333333333333,
-        "99th_percentile_rounds": 1.98,
+        "average_rounds": 2.0,
+        "99th_percentile_rounds": 2.0,
         "all_rounds": [
-            1,
-            1,
             2
         ]
     }
