@@ -48,9 +48,9 @@ def consensus_simulation(total_vehicles, total_rounds, message_loss_rate, epsilo
             break
 
     else:
+
         # If no convergence is reached within the total rounds
         print("Consensus not reached within the specified rounds.")
-        rounds_to_reach_consensus = None
 
     # **After** the for-loop ends, decide the final output for each vehicle
     final_decisions = []
@@ -95,7 +95,7 @@ def run_simulations_and_store_results(configurations, output_file):
             print(
                 f"\n--- Running Repeat {repeat_index + 1} for Configuration {config} ---")
             result = consensus_simulation(
-                N, total_rounds=100, message_loss_rate=message_loss_rate,
+                N, total_rounds=10, message_loss_rate=message_loss_rate,
                 epsilon_value=epsilon_value, f=f, byzantine_vehicles=random.sample(
                     range(N), f)
             )
@@ -113,10 +113,16 @@ def run_simulations_and_store_results(configurations, output_file):
             print(
                 f"Rounds to reach consensus for repeat {repeat_index + 1}: {result['rounds_to_reach_consensus']}")
 
-        # Calculate average and 99th percentile for this configuration
         all_rounds = [run['rounds_to_reach_consensus'] for run in runs_data]
-        average_rounds = np.mean(all_rounds)
-        percentile_99 = np.percentile(all_rounds, 99)
+        # average_rounds = np.mean(all_rounds)
+        # percentile_99 = np.percentile(all_rounds, 99)
+        # Filter out None values from all_rounds
+        valid_rounds = [round for round in all_rounds if round is not None]
+
+        # Calculate average and 99th percentile only for valid rounds
+        average_rounds = np.mean(valid_rounds) if valid_rounds else None
+        percentile_99 = np.percentile(
+            valid_rounds, 99) if valid_rounds else None
 
         result_summary = {
             'configuration': config,
