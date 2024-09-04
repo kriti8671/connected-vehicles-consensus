@@ -16,14 +16,14 @@ def consensus_simulation(total_vehicles, total_rounds, message_loss_rate, epsilo
     ]
 
     message_losses_per_round = []  # Initialize list to track message losses per round
-    inconclusive_count = 0
-    final_decisions = []  # Initialize list to track final decisions
-    rounds_to_reach_consensus = None
+    # Initialize list to track inconclusive outputs per round
+    inconclusive_outputs_per_round = []
+    final_decisions_per_round = []  # Initialize list to track final decisions per round
 
-    # Simulate rounds of message passing and state updating
     for current_round in range(total_rounds):
         print(f"\n--- Round {current_round + 1} ---")
         round_message_losses = 0  # Initialize counter for message losses in this round
+        round_final_decisions = []  # Initialize list to track final decisions in this round
         inconclusive_count = 0  # Initialize counter for inconclusive decisions
 
         # Each vehicle broadcasts its state to all other vehicles
@@ -35,38 +35,39 @@ def consensus_simulation(total_vehicles, total_rounds, message_loss_rate, epsilo
         # Record message losses for the round
         message_losses_per_round.append(round_message_losses)
 
-        # Update state for each vehicle
+        # Update state for each vehicle and collect final decisions
         for vehicle in vehicles:
             vehicle.update_state(total_vehicles, f)
 
-        # **After each round**, check for convergence among correct vehicles
-        correct_vehicle_states = [
-            v.current_state for v in vehicles if not v.is_byzantine]
-        if max(correct_vehicle_states) - min(correct_vehicle_states) <= epsilon_value:
+        for vehicle in vehicles:
+            decision = vehicle.decide_final_output()
+            round_final_decisions.append(decision)
+            if decision is None:
+                inconclusive_count += 1
+
+        # Record inconclusive outputs for the round
+        inconclusive_outputs_per_round.append(inconclusive_count)
+        # Record final decisions for the round
+        final_decisions_per_round.append(round_final_decisions)
+
+        # Check if all vehicles have reached a consensus
+        if all(output == round_final_decisions[0] for output in round_final_decisions if output is not None):
             rounds_to_reach_consensus = current_round + 1
             print(f"Consensus reached at round {rounds_to_reach_consensus}")
             break
-
     else:
-        # If no convergence is reached within the total rounds
-        print("Consensus not reached within the specified rounds.")
-        rounds_to_reach_consensus = None
-
-    # **After** the for-loop ends, decide the final output for each vehicle
-    final_decisions = []
-    for vehicle in vehicles:
-        decision = vehicle.decide_final_output()
-        final_decisions.append(decision)
-        if decision is None:
-            inconclusive_count += 1
+        # If no consensus is reached within the total rounds
+        rounds_to_reach_consensus = total_rounds
 
     # Prepare the results dictionary to return
     return {
         'rounds_to_reach_consensus': rounds_to_reach_consensus,
         'initial_binary_states': [vehicle.initial_state for vehicle in vehicles],
-        'inconclusive_counts': inconclusive_count,
+        # Now a list of counts per round
+        'inconclusive_counts': inconclusive_outputs_per_round,
         'message_losses_per_round': message_losses_per_round,
-        'final_decisions': [final_decisions]
+        # Now a list of decisions per round
+        'final_decisions_per_round': final_decisions_per_round
     }
 
 
@@ -95,7 +96,7 @@ def run_simulations_and_store_results(configurations, output_file):
             print(
                 f"\n--- Running Repeat {repeat_index + 1} for Configuration {config} ---")
             result = consensus_simulation(
-                N, total_rounds=100, message_loss_rate=message_loss_rate,
+                N, total_rounds=10, message_loss_rate=message_loss_rate,
                 epsilon_value=epsilon_value, f=f, byzantine_vehicles=random.sample(
                     range(N), f)
             )
@@ -106,7 +107,7 @@ def run_simulations_and_store_results(configurations, output_file):
                 'initial_binary_states': result['initial_binary_states'],
                 'inconclusive_outputs': result['inconclusive_counts'],
                 'message_losses_per_round': result['message_losses_per_round'],
-                'final_decisions': result['final_decisions']
+                'final_decisions_per_round': result['final_decisions_per_round']
             }
 
             runs_data.append(run_result)
@@ -139,17 +140,19 @@ def run_simulations_and_store_results(configurations, output_file):
 
 
 configurations = [
-
-    {'N': 20, 'f': 5, 'message_loss_rate': 0.7,
+    {'N': 10, 'f': 1, 'message_loss_rate': 0.1,
         'initial_ratio': 0.7, 'epsilon': 0.01},
 
-    # {'N': 20, 'f': 1, 'message_loss_rate': 0.1,
-    #     'initial_ratio': 0.7, 'epsilon': 0.01},
+    {'N': 15, 'f': 1, 'message_loss_rate': 0.1,
+        'initial_ratio': 0.7, 'epsilon': 0.01},
 
-    # {'N': 25, 'f': 1, 'message_loss_rate': 0.1,
-    #     'initial_ratio': 0.7, 'epsilon': 0.01}
+    {'N': 20, 'f': 1, 'message_loss_rate': 0.1,
+        'initial_ratio': 0.7, 'epsilon': 0.01},
+
+    {'N': 25, 'f': 1, 'message_loss_rate': 0.1,
+        'initial_ratio': 0.7, 'epsilon': 0.01}
 
 ]
 
 run_simulations_and_store_results(
-    configurations, output_file='simulation_results.json')
+    configurations, output_file='simulation_results_sept2.json')

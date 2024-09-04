@@ -10,7 +10,8 @@ class Vehicle:
         self.is_byzantine = is_byzantine
         self.received_states = {}
 
-    # vehicles.py
+# TODO:
+# Implement additional Byzantine strategies for more realistic fault simulation
 
     def broadcast_state(self, all_vehicles, message_loss_rate):
         message_losses = 0  # Initialize counter for message losses
@@ -43,22 +44,6 @@ class Vehicle:
                         message_losses += 1  # Increment for each lost message
 
         return message_losses  # Return total message losses for this broadcast
-
-    def broadcast_byzantine_state(self, all_vehicles, message_loss_rate):
-        """Byzantine vehicles send inconsistent states to different vehicles."""
-        print(
-            f"Byzantine Vehicle {self.vehicle_id} broadcasting inconsistent states.")
-        for vehicle in all_vehicles:
-            if vehicle.vehicle_id != self.vehicle_id:
-                # Byzantine vehicle sends inconsistent states (random 0 or 1) to different vehicles
-                state_to_send = random.choice([0, 1])
-                if random.random() > message_loss_rate:
-                    vehicle.receive_state(self.vehicle_id, state_to_send)
-                    print(
-                        f"Byzantine Vehicle {self.vehicle_id} sent state {state_to_send} to Vehicle {vehicle.vehicle_id}.")
-                else:
-                    print(
-                        f"Message from Byzantine Vehicle {self.vehicle_id} to Vehicle {vehicle.vehicle_id} lost due to message loss.")
 
     def receive_state(self, sender_id, state):
         """Receive state from another vehicle."""
