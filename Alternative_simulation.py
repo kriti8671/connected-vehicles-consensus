@@ -1,7 +1,7 @@
 import random
 import numpy as np
 import json_file
-from vehicles import Vehicle
+from Alternative_vehicles import Vehicle
 
 
 def consensus_simulation(total_vehicles, total_rounds, message_loss_rate, epsilon_value, f, byzantine_vehicles=None):
@@ -16,9 +16,9 @@ def consensus_simulation(total_vehicles, total_rounds, message_loss_rate, epsilo
     ]
 
     message_losses_per_round = []  # Initialize list to track message losses per round
-    inconclusive_count = 0
     final_decisions = []  # Initialize list to track final decisions
     rounds_to_reach_consensus = None
+    consensus_threshold = 0.8 * (total_vehicles - f)  # 80% of correct nodes
 
     # Simulate rounds of message passing and state updating
     for current_round in range(total_rounds):
@@ -39,27 +39,33 @@ def consensus_simulation(total_vehicles, total_rounds, message_loss_rate, epsilo
         for vehicle in vehicles:
             vehicle.update_state(total_vehicles, f)
 
-        # **After each round**, check for convergence among correct vehicles
+        # Check consensus after state updates in the same round
         correct_vehicle_states = [
             v.current_state for v in vehicles if not v.is_byzantine]
-        print(f"Correct_vehicle_states: {correct_vehicle_states}")
-        print(f"max: {max(correct_vehicle_states)}")
-        print(f"min: {min(correct_vehicle_states)}")
-        if max(correct_vehicle_states) - min(correct_vehicle_states) <= (epsilon_value*100):
-            # Multipy epsilon value to 10 or 100 to early converged
+
+        # Calculate consensus state (average of correct vehicle states)
+        consensus_state = sum(correct_vehicle_states) / \
+            len(correct_vehicle_states)
+
+        # Count how many vehicles are within epsilon range of the consensus state
+        within_epsilon_count = sum(
+            1 for state in correct_vehicle_states if abs(state - consensus_state) <= epsilon_value
+        )
+
+        # Check if 80% or more vehicles are within consensus
+        if within_epsilon_count >= consensus_threshold:
             rounds_to_reach_consensus = current_round + 1
-            print(f"Consensus reached at round {rounds_to_reach_consensus}")
+            print(
+                f"Consensus reached at round {rounds_to_reach_consensus} with {within_epsilon_count} vehicles in agreement.")
             break
-
     else:
-
-        # If no convergence is reached within the total rounds
+        # If no consensus is reached within the total rounds
         print("Consensus not reached within the specified rounds.")
 
-    # **After** the for-loop ends, decide the final output for each vehicle
+    # **After the for-loop ends**, decide the final output for each vehicle based on consensus
     final_decisions = []
     for vehicle in vehicles:
-        decision = vehicle.decide_final_output()
+        decision = vehicle.decide_final_output(consensus_state)
         final_decisions.append(decision)
         if decision is None:
             inconclusive_count += 1
@@ -70,7 +76,7 @@ def consensus_simulation(total_vehicles, total_rounds, message_loss_rate, epsilo
         'initial_binary_states': [vehicle.initial_state for vehicle in vehicles],
         'inconclusive_count': inconclusive_count,
         'message_losses_per_round': message_losses_per_round,
-        'final_decisions': [final_decisions]
+        'final_decisions': final_decisions
     }
 
 
@@ -99,7 +105,7 @@ def run_simulations_and_store_results(configurations, output_file):
             print(
                 f"\n--- Running Repeat {repeat_index + 1} for Configuration {config} ---")
             result = consensus_simulation(
-                N, total_rounds=10, message_loss_rate=message_loss_rate,
+                N, total_rounds=6, message_loss_rate=message_loss_rate,
                 epsilon_value=epsilon_value, f=f, byzantine_vehicles=random.sample(
                     range(N), f)
             )
@@ -118,12 +124,8 @@ def run_simulations_and_store_results(configurations, output_file):
                 f"Rounds to reach consensus for repeat {repeat_index + 1}: {result['rounds_to_reach_consensus']}")
 
         all_rounds = [run['rounds_to_reach_consensus'] for run in runs_data]
-        # average_rounds = np.mean(all_rounds)
-        # percentile_99 = np.percentile(all_rounds, 99)
-        # Filter out None values from all_rounds
         valid_rounds = [round for round in all_rounds if round is not None]
 
-        # Calculate average and 99th percentile only for valid rounds
         average_rounds = np.mean(valid_rounds) if valid_rounds else None
         percentile_99 = np.percentile(
             valid_rounds, 99) if valid_rounds else None
@@ -149,17 +151,9 @@ def run_simulations_and_store_results(configurations, output_file):
 
 
 configurations = [
-
-    {'N': 20, 'f': 4, 'message_loss_rate': 0.5,
-        'initial_ratio': 0.7, 'epsilon': 0.00001},
-
-    # {'N': 20, 'f': 1, 'message_loss_rate': 0.1,
-    #     'initial_ratio': 0.7, 'epsilon': 0.01},
-
-    # {'N': 25, 'f': 1, 'message_loss_rate': 0.1,
-    #     'initial_ratio': 0.7, 'epsilon': 0.01}
-
+    {'N': 20, 'f': 3, 'message_loss_rate': 0.1,
+        'initial_ratio': 0.7, 'epsilon': 0.001},
 ]
 
 run_simulations_and_store_results(
-    configurations, output_file='simulation_results.json')
+    configurations, output_file='Alternative_resultes.json')

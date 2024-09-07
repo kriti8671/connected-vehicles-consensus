@@ -2,7 +2,8 @@ import json
 import matplotlib.pyplot as plt
 
 
-json_file_path = 'simulation_results.json'
+# json_file_path = 'simulation_results.json'
+json_file_path = 'Alternative_resultes.json'
 
 with open(json_file_path, 'r') as file:
     data = json.load(file)

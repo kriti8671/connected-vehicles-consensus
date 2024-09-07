@@ -42,11 +42,7 @@ def consensus_simulation(total_vehicles, total_rounds, message_loss_rate, epsilo
         # **After each round**, check for convergence among correct vehicles
         correct_vehicle_states = [
             v.current_state for v in vehicles if not v.is_byzantine]
-        print(f"Correct_vehicle_states: {correct_vehicle_states}")
-        print(f"max: {max(correct_vehicle_states)}")
-        print(f"min: {min(correct_vehicle_states)}")
-        if max(correct_vehicle_states) - min(correct_vehicle_states) <= (epsilon_value*100):
-            # Multipy epsilon value to 10 or 100 to early converged
+        if max(correct_vehicle_states) - min(correct_vehicle_states) <= epsilon_value:
             rounds_to_reach_consensus = current_round + 1
             print(f"Consensus reached at round {rounds_to_reach_consensus}")
             break
@@ -68,7 +64,7 @@ def consensus_simulation(total_vehicles, total_rounds, message_loss_rate, epsilo
     return {
         'rounds_to_reach_consensus': rounds_to_reach_consensus,
         'initial_binary_states': [vehicle.initial_state for vehicle in vehicles],
-        'inconclusive_count': inconclusive_count,
+        'inconclusive_counts': inconclusive_count,
         'message_losses_per_round': message_losses_per_round,
         'final_decisions': [final_decisions]
     }
@@ -108,7 +104,7 @@ def run_simulations_and_store_results(configurations, output_file):
                 'run_number': repeat_index + 1,
                 'rounds_to_reach_consensus': result['rounds_to_reach_consensus'],
                 'initial_binary_states': result['initial_binary_states'],
-                'inconclusive_outputs': result['inconclusive_count'],
+                'inconclusive_outputs': result['inconclusive_counts'],
                 'message_losses_per_round': result['message_losses_per_round'],
                 'final_decisions': result['final_decisions']
             }
@@ -150,8 +146,8 @@ def run_simulations_and_store_results(configurations, output_file):
 
 configurations = [
 
-    {'N': 20, 'f': 4, 'message_loss_rate': 0.5,
-        'initial_ratio': 0.7, 'epsilon': 0.00001},
+    {'N': 20, 'f': 5, 'message_loss_rate': 0.7,
+        'initial_ratio': 0.7, 'epsilon': 0.01},
 
     # {'N': 20, 'f': 1, 'message_loss_rate': 0.1,
     #     'initial_ratio': 0.7, 'epsilon': 0.01},

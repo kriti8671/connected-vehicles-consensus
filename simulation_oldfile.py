@@ -140,17 +140,17 @@ def run_simulations_and_store_results(configurations, output_file):
 
 
 configurations = [
-    {'N': 10, 'f': 1, 'message_loss_rate': 0.1,
-        'initial_ratio': 0.7, 'epsilon': 0.01},
+    {'N': 10, 'f': 1, 'message_loss_rate': 0.2,
+        'initial_ratio': 0.7, 'epsilon': 0.00001},
 
-    {'N': 15, 'f': 1, 'message_loss_rate': 0.1,
-        'initial_ratio': 0.7, 'epsilon': 0.01},
+    # {'N': 15, 'f': 1, 'message_loss_rate': 0.1,
+    #     'initial_ratio': 0.7, 'epsilon': 0.01},
 
-    {'N': 20, 'f': 1, 'message_loss_rate': 0.1,
-        'initial_ratio': 0.7, 'epsilon': 0.01},
+    # {'N': 20, 'f': 1, 'message_loss_rate': 0.1,
+    #     'initial_ratio': 0.7, 'epsilon': 0.01},
 
-    {'N': 25, 'f': 1, 'message_loss_rate': 0.1,
-        'initial_ratio': 0.7, 'epsilon': 0.01}
+    # {'N': 25, 'f': 1, 'message_loss_rate': 0.1,
+    # 'initial_ratio': 0.7, 'epsilon': 0.01}
 
 ]
 

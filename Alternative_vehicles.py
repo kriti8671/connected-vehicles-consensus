@@ -78,15 +78,19 @@ class Vehicle:
         trimmed_states = sorted_states[f:-f]
         return trimmed_states
 
-    def decide_final_output(self):
-        """Decide final output"""
-        if self.current_state < 0.5 - self.epsilon / 2:
-            print(f"Vehicle {self.vehicle_id} final decision: 0")
-            return 0
-        elif self.current_state > 0.5 + self.epsilon / 2:
-            print(f"Vehicle {self.vehicle_id} final decision: 1")
-            return 1
+# Changes this functionn
+    def decide_final_output(self, consensus_state):
+        """Decide final output based on consensus state and vehicle's current state."""
+        if abs(self.current_state - consensus_state) <= self.epsilon:
+            # Vehicle's state is within the consensus range
+            if consensus_state >= 0.5:
+                print(f"Vehicle {self.vehicle_id} final decision: 1")
+                return 1
+            else:
+                print(f"Vehicle {self.vehicle_id} final decision: 0")
+                return 0
         else:
-            print(
-                f"Vehicle {self.vehicle_id} final decision: None")
+            # Vehicle's state is far from consensus, mark as None
+            print(f"Vehicle {self.vehicle_id} final decision: None")
             return None
+
