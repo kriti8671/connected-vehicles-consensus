@@ -1,19 +1,22 @@
 import random
 import math
+import json
+
 
 # Configuration Parameters
-n = 15  # Total number of nodes (vehicles)
-f = 2  # Maximum number of crash-faulty nodes (controlled)
+n = 10  # Total number of nodes (vehicles)
+f = 1  # Maximum number of crash-faulty nodes (controlled)
 T = 3  # Number of stable rounds required before finalizing decision
-max_rounds = 100  # Maximum rounds to reach consensus
+max_rounds = 50  # Maximum rounds to reach consensus
 epsilon = 0.01  # Precision for approximate consensus
 value_range = (0, 1)  # Range for node values
 
-ratio_one = 0.7  # Ratio of nodes initialized to value 1
+ratio_one = 0  # Ratio of nodes initialized to value 1
 message_loss_probability = 0.1  # Probability of message loss (10%)
-message_loss_tracking = []  # List to track lost messages per round
-
-# Helper function to calculate pend
+message_loss_tracking = []
+phase_progression = []  # Track phase evolution of each node per round
+node_values_over_rounds = []  # To track node values over each round
+stability_tracking = []  # To track stability per node per round
 
 
 def calculate_pend(epsilon):
@@ -153,6 +156,7 @@ pend = calculate_pend(epsilon)
 for round_num in range(max_rounds):
     print(f"--- Round {round_num} ---")
     lost_messages = 0  # Track lost messages for this round
+    round_values = []
 
     # Randomly crash some nodes during the rounds but within the max limit
     for node in nodes:
@@ -170,7 +174,9 @@ for round_num in range(max_rounds):
             # Broadcast final decision if phase pend is reached
             node.broadcast_final_decision(nodes)
             print(f"Node {i} broadcasts final decision: {node.final_decision}")
+            round_values.append(node.value)  # Store the final value
             continue
+        round_values.append(node.value)  # Store node value for this round
         print(f"Node {i} (Phase {node.phase}, Value {node.value:.4f}) sending:")
         for j in range(n):
             if i != j:
@@ -180,6 +186,8 @@ for round_num in range(max_rounds):
                     print(f"    Node {i} sends {node.value:.4f} to Node {j}")
                     nodes[j].receive(node.value, node.phase, i)
                     received_states[j].append(node.value)
+         # Append round's node values for convergence tracking
+    node_values_over_rounds.append(round_values)
 
     # Print received states for each node in this round
     print("\nReceived states in this round:")
@@ -187,7 +195,32 @@ for round_num in range(max_rounds):
         print(
             f"Node {node_id} received states: {[f'{val:.4f}' for val in values]}")
 
+    # Place this code to track phase progression right here, before updating the state
+    round_phase_data = []  # Track phase progression for this round
+    for i, node in enumerate(nodes):
+        if node.is_crashed:
+            round_phase_data.append(
+                {'Node': i, 'Phase': 'Crashed'})  # Record crash
+            continue
+        round_phase_data.append(
+            {'Node': i, 'Phase': node.phase})  # Record phase
+
+    phase_progression.append(round_phase_data)  # Track this round's phase data
+
+    # Track stable rounds per node
+    round_stability = []
+    for i, node in enumerate(nodes):
+        if node.is_crashed:
+            round_stability.append(None)
+            continue
+        if node.stable_rounds >= T:
+            round_stability.append(node.stable_rounds)
+        else:
+            round_stability.append(0)  # Node is not stable yet
+    stability_tracking.append(round_stability)
+
     # Update node state based on received values
+
     for i, node in enumerate(nodes):
         if node.is_crashed:
             continue  # Skip crashed nodes
@@ -219,6 +252,16 @@ for i, node in enumerate(nodes):
         print(f"Node {i}: Crashed, no final output.")
     else:
         print(f"Node {i}: Did not reach stability.")
+
+
+data_to_save = {
+    'message_loss_tracking': message_loss_tracking,
+    'phase_progression': phase_progression,
+    'node_values_over_rounds': node_values_over_rounds,
+    'stability_tracking': stability_tracking
+}
+with open('simulation_data_dac.json', 'w') as f:
+    json.dump(data_to_save, f, indent=4)  # Save data to JSON
 
 
 # Display message loss tracking in a list format
