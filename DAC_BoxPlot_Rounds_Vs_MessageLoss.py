@@ -1,0 +1,24 @@
+import json
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+def plot_rounds_vs_loss_rate(json_file):
+    with open(json_file, 'r') as f:
+        data = json.load(f)
+
+    # Extracting data for the plot
+    loss_rates = [entry['message_loss_rate'] for entry in data]
+    rounds = [entry['rounds'] for entry in data]
+
+    # Plotting the box plot
+    sns.boxplot(x=loss_rates, y=rounds)
+    plt.xlabel('Message Loss Rate')
+    plt.ylabel('Rounds to Convergence')
+    plt.title('Rounds to Convergence vs Message Loss Rate')
+    plt.show()
+
+
+# Call these functions as needed to generate the plots
+if __name__ == "__main__":
+    plot_rounds_vs_loss_rate('DAC_Algorithm_Results.json')

@@ -1,218 +1,223 @@
 import random
 import math
 import json
+from collections import defaultdict
+
+# Calculate pend
 
 
-# function to calculate pend
 def calculate_pend(epsilon):
     return math.ceil(math.log(epsilon) / math.log(0.5))
 
-# Node class
-
 
 class Node:
-    def __init__(self, initial_value, vehicle_id, epsilon, n):
-        self.value = initial_value
+    def __init__(self, id, initial_value, total_nodes):
+        self.id = id
         self.phase = 0
+        self.value = initial_value
         self.min_value = initial_value
         self.max_value = initial_value
-        self.stable_rounds = 0
-        self.bit_vector = [0] * n
-        self.is_crashed = False
-        self.final_output = False
-        self.vehicle_id = vehicle_id
-        self.epsilon = epsilon
-        self.final_decision = None
+        self.R = [0] * total_nodes  # Bit vector tracking received messages
+        self.R[self.id] = 1  # Mark itself as received
+        self.total_nodes = total_nodes
+        self.faulty = False  # Node is non-faulty by default
 
-    def receive(self, value, phase, sender, n):
-        if self.is_crashed or self.final_output:
-            return
-        if value is None:
-            print(
-                f"Node {self.vehicle_id} received 'None' from Node {sender}. Ignoring...")
-            return
-        if phase > self.phase:
-            self.phase = phase
-            self.value = value
-            self.reset_bit_vector(n)
-        elif phase == self.phase and self.bit_vector[sender] == 0:
-            self.bit_vector[sender] = 1
-            self.store_value(value)
-
-    def store_value(self, received_value):
-        if received_value < self.min_value:
-            self.min_value = received_value
-        elif received_value > self.max_value:
-            self.max_value = received_value
-
-    def update_state(self, pend, n, T):
-        if self.is_crashed or self.final_output:
-            return
-        if self.phase < pend:
-            if sum(self.bit_vector) >= (n // 2 + 1):
-                new_value = (self.min_value + self.max_value) / 2
-                if abs(self.value - new_value) < self.epsilon:
-                    self.stable_rounds += 1
-                else:
-                    self.stable_rounds = 0
-                self.value = new_value
-                self.phase += 1
-                self.reset_bit_vector(n)
-        if self.phase == pend and self.stable_rounds >= T:
-            if not self.final_output:
-                self.final_output = True
-                self.final_decision = self.decide_final_output()
-
-    def reset_bit_vector(self, n):
-        self.bit_vector = [0] * n
+    def reset_for_next_phase(self):
+        """Reset values related to state and the received message bit vector (R) after advancing to the next phase."""
         self.min_value = self.value
         self.max_value = self.value
+        # Reset the bit vector for the new phase
+        self.R = [0] * self.total_nodes
+        self.R[self.id] = 1  # Mark itself as received again for the new phase
 
-    def decide_final_output(self):
-        if self.value < 0.25 - self.epsilon:
+    def update_value(self):
+        """Update the node's value based on the min and max values received."""
+        self.value = (self.min_value + self.max_value) / 2
+
+    def make_final_decision(self, epsilon):
+        """Decide the final output based on the final value and epsilon."""
+        if self.value < 0.25 - epsilon:
             return 0
-        elif self.value > 0.25 + self.epsilon:
+        elif self.value > 0.25 + epsilon:
             return 1
         else:
             return None
 
-    def broadcast_final_decision(self, other_nodes, n):
-        for node in other_nodes:
-            if node != self and not node.is_crashed:
-                node.receive(self.final_decision,
-                             self.phase, self.vehicle_id, n)
 
+class DACAlgorithm:
+    def __init__(self, total_nodes, num_faulty_nodes, message_loss_rate, initial_ratio, epsilon):
+        self.total_nodes = total_nodes
+        self.message_loss_rate = message_loss_rate
+        self.pend = calculate_pend(epsilon)
+        self.nodes = []
+        self.faulty_nodes = random.sample(range(total_nodes), num_faulty_nodes)
+        self.initialize_nodes(initial_ratio)
 
-#  function to simulate message loss
-def message_lost(message_loss_probability):
-    return random.random() < message_loss_probability
+    def initialize_nodes(self, ratio):
+        """Initialize the nodes with binary values based on the input ratio."""
+        num_ones = int(self.total_nodes *
+                       ratio)
+        num_zeros = self.total_nodes - num_ones   # The rest will have value 0
+        values = [1] * num_ones + [0] * num_zeros
+        random.shuffle(values)
 
-# Function to simulate controlled crash behavior
+        # Assign the values to the nodes
+        for i in range(self.total_nodes):
+            node = Node(i, values[i], self.total_nodes)
+            if i in self.faulty_nodes:
+                node.faulty = True
+            self.nodes.append(node)
 
+    def simulate_message_loss(self):
+        """Simulate message loss based on the given loss rate."""
+        return random.random() <= self.message_loss_rate
 
-def crash_behavior(node, round_num, crashed_nodes, max_crashes):
-    if len(crashed_nodes) < max_crashes and random.random() < 0.1:
-        node.is_crashed = True
-        crashed_nodes.append(node)
-        print(f"Node {node.vehicle_id} crashed in round {round_num}.")
-
-# Function to create nodes with binary values
-
-
-def create_binary_nodes(ratio_one, epsilon, n):
-    nodes = []
-    num_ones = int(ratio_one * n)
-    num_zeros = n - num_ones
-    values = [1] * num_ones + [0] * num_zeros
-    random.shuffle(values)
-    for vehicle_id, value in enumerate(values):
-        nodes.append(Node(value, vehicle_id, epsilon, n))
-    return nodes
-
-# Function to run the DAC algorithm simulation
-
-
-def run_simulation(n, f, T, max_rounds, epsilon, ratio_one, message_loss_probability, simulation_id):
-    message_loss_tracking = []
-    phase_progression = []
-    node_values_over_rounds = []
-    stability_tracking = []
-
-    # Initialize nodes
-    nodes = create_binary_nodes(ratio_one, epsilon, n)
-    max_crashes = f
-    crashed_nodes = []
-    pend = calculate_pend(epsilon)
-
-    # Track rounds to reach consensus
-    rounds_to_reach_consensus = 0
-
-    for round_num in range(max_rounds):
-        print(f"--- Simulation {simulation_id}, Round {round_num} ---")
-        lost_messages = 0
-        round_values = []
-
-        for node in nodes:
-            crash_behavior(node, round_num, crashed_nodes, max_crashes)
-
-        received_states = {i: [] for i in range(n)}
-
-        for i, node in enumerate(nodes):
-            if node.is_crashed:
+    def broadcast_messages(self):
+        """Simulate the broadcast of messages by all nodes."""
+        messages = defaultdict(list)
+        for node in self.nodes:
+            if node.faulty:
+                print(f"Node {node.id} is crashed and does not participate.")
                 continue
-            if node.final_output:
-                node.broadcast_final_decision(nodes, n)
-                round_values.append(node.value)
-                continue
-            round_values.append(node.value)
-            for j in range(n):
-                if i != j:
-                    if message_lost(message_loss_probability):
-                        lost_messages += 1
-                    else:
-                        nodes[j].receive(node.value, node.phase, i, n)
-                        received_states[j].append(node.value)
+            message = (node.id, node.value, node.phase)
+            for other_node in self.nodes:
+                if other_node.id != node.id and not self.simulate_message_loss():
+                    messages[other_node.id].append(message)
+            print(
+                f"Node {node.id} (Phase {node.phase}) broadcasts value {node.value}.")
+        return messages
 
-        node_values_over_rounds.append(round_values)
-        round_phase_data = [
-            {'Node': i, 'Phase': node.phase if not node.is_crashed else 'Crashed'} for i, node in enumerate(nodes)]
-        phase_progression.append(round_phase_data)
+    def run(self):
+        """Run the DAC algorithm and count the number of rounds to termination."""
+        rounds = 0  # Initialize round counter
 
-        round_stability = [
-            node.stable_rounds if not node.is_crashed else None for node in nodes]
-        stability_tracking.append(round_stability)
+        while True:
+            rounds += 1  # Increment round count
+            print(f"\n--- Round {rounds} ---")
+            # Check if all non-faulty nodes have reached the termination phase
+            all_terminated = all(
+                node.phase == self.pend or node.faulty for node in self.nodes)
+            if all_terminated:
+                print(f"All nodes reached termination after {rounds} rounds.")
+                break
 
-        for i, node in enumerate(nodes):
-            if node.is_crashed:
-                continue
-            node.update_state(pend, n, T)
+            messages = self.broadcast_messages()
 
-        message_loss_tracking.append(lost_messages)
+            # Process messages for each node
+            for node in self.nodes:
+                if node.faulty:
+                    continue  # Skip processing for faulty nodes
 
-        if all(node.final_output or node.is_crashed for node in nodes):
-            rounds_to_reach_consensus = round_num
-            print("Consensus reached based on phase index!")
-            break
+                # Current round's received messages
+                received_messages = messages[node.id]
 
-    return {
-        'simulation_id': simulation_id,
-        'message_loss_tracking': message_loss_tracking,
-        'phase_progression': phase_progression,
-        'node_values_over_rounds': node_values_over_rounds,
-        'stability_tracking': stability_tracking,
-        'rounds_to_reach_consensus': rounds_to_reach_consensus
-    }
+                # Create a dictionary to store unique messages per node, replacing old messages if a new one is received
+                unique_messages = {}
+
+                # Retain messages from previous rounds for the same phase
+                for sender_id in range(self.total_nodes):
+                    if node.R[sender_id] == 1 and sender_id != node.id:
+                        unique_messages[sender_id] = (
+                            sender_id, node.value, node.phase)
+
+                # Process new messages received in the current round and replace previous messages if received again
+                for sender_id, sender_value, sender_phase in received_messages:
+                    unique_messages[sender_id] = (
+                        sender_id, sender_value, sender_phase)
+
+                accumulated_messages = list(unique_messages.values())
+                # print(
+                #     f"Node {node.id} (Phase {node.phase}) accumulated messages: {accumulated_messages}")
+
+                if node.phase == self.pend:
+                    # print(
+                    #     f"Node {node.id} has reached pend and will not update its state.")
+                    continue  # Node will broadcast but not update its state or jump phases
+
+                for sender_id, sender_value, sender_phase in accumulated_messages:
+                    if sender_phase > node.phase:
+                        # print(
+                        #     f"Node {node.id} jumps to phase {sender_phase} (from Node {sender_id})")
+                        node.value = sender_value
+                        node.phase = sender_phase
+                        node.reset_for_next_phase()  # Reset after jumping to the new phase
+                        # break  "we need to check all the receive message even after we update the phase"
+                    elif sender_phase == node.phase and node.R[sender_id] == 0:
+                        node.R[sender_id] = 1
+                        node.min_value = min(node.min_value, sender_value)
+                        node.max_value = max(node.max_value, sender_value)
+
+                if sum(node.R) >= (self.total_nodes // 2) + 1 and node.phase < self.pend:
+                    # print(
+                    #     f"Node {node.id} advances to phase {node.phase + 1}.")
+                    node.update_value()
+                    node.phase += 1
+                    node.reset_for_next_phase()  # Reset only after advancing to the next phase
+        return rounds
+
+    def print_final_values(self):
+        """Print the final state of all nodes."""
+        print("\n--- Final Node States ---")
+        for node in self.nodes:
+            if node.faulty:
+                print(f"Node {node.id} is crashed and has no final output.")
+            else:
+                decision = node.make_final_decision(0.01)  # Example epsilon
+                print(
+                    f"Node {node.id}: Final Value = {node.value}, Final Phase = {node.phase}, Decision = {decision}")
 
 
-# Predefined configurations for multiple runs
-configurations = [
-    {'N': 15, 'f': 2, 'message_loss_rate': 0.1,
-        'initial_ratio': 0.8, 'epsilon': 0.01, 'max_rounds': 100},
-    {'N': 20, 'f': 3, 'message_loss_rate': 0.1,
-        'initial_ratio': 0.8, 'epsilon': 0.01, 'max_rounds': 100}
-]
+if __name__ == "__main__":
+    num_runs = int(
+        input("How many times do you want to run each configuration? "))
 
-all_simulation_data = []
+    configurations = [
 
-# Run simulations for each configuration
-for config in configurations:
-    num_repeats = int(input(
-        f"How many times do you want to repeat the simulation for this configuration? "))
-    for sim_id in range(1, num_repeats + 1):
-        simulation_result = run_simulation(
-            n=config['N'],
-            f=config['f'],
-            T=3,
-            max_rounds=config['max_rounds'],
-            epsilon=config['epsilon'],
-            ratio_one=config['initial_ratio'],
-            message_loss_probability=config['message_loss_rate'],
-            simulation_id=f"{config['N']}_{sim_id}"
-        )
-        all_simulation_data.append(simulation_result)
+        {'N': 50, 'f': 15, 'message_loss_rate': 0.05,
+            'initial_ratio': 0.8, 'epsilon': 0.01},
+        {'N': 50, 'f': 15, 'message_loss_rate': 0.1,
+            'initial_ratio': 0.8, 'epsilon': 0.01},
+        {'N': 50, 'f': 15, 'message_loss_rate': 0.15,
+            'initial_ratio': 0.8, 'epsilon': 0.01},
+        {'N': 50, 'f': 15, 'message_loss_rate': 0.2,
+            'initial_ratio': 0.8, 'epsilon': 0.01},
+        {'N': 50, 'f': 15, 'message_loss_rate': 0.25,
+            'initial_ratio': 0.8, 'epsilon': 0.01},
+        {'N': 50, 'f': 15, 'message_loss_rate': 0.3,
+            'initial_ratio': 0.8, 'epsilon': 0.01},
+        {'N': 50, 'f': 15, 'message_loss_rate': 0.35,
+            'initial_ratio': 0.8, 'epsilon': 0.01},
+        {'N': 50, 'f': 15, 'message_loss_rate': 0.4,
+            'initial_ratio': 0.8, 'epsilon': 0.01},
 
-# Save all results in a single file
-with open('all_simulation_results.json', 'w') as f:
-    json.dump(all_simulation_data, f, indent=4)
 
-print("All simulation data saved to 'all_simulation_results.json'")
+
+    ]
+
+    results = []  # This will store results for the JSON file
+
+    for config in configurations:
+        for _ in range(num_runs):
+            print(f"\nRunning DAC with configuration: {config}")
+            dac = DACAlgorithm(
+                total_nodes=config['N'],
+                num_faulty_nodes=config['f'],
+                message_loss_rate=config['message_loss_rate'],
+                initial_ratio=config['initial_ratio'],
+                epsilon=config['epsilon']
+            )
+            rounds = dac.run()
+            dac.print_final_values()
+
+            # Store results for each run
+            result = {
+                'config': config,
+                'rounds': rounds,
+                'num_nodes': config['N'],
+                'message_loss_rate': config['message_loss_rate']
+            }
+            results.append(result)
+
+    # Write results to JSON file
+    with open('DAC_Algorithm_Results.json', 'w') as f:
+        json.dump(results, f, indent=4)
