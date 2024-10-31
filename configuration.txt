@@ -1,5 +1,5 @@
 # Configuration for Num_of_Node_vs_Rounds_To_Reach_Consensus
-     {'N': 15, 'f': 6, 'message_loss_rate': 0.05,
+    {'N': 15, 'f': 6, 'message_loss_rate': 0.05,
         'initial_ratio': 0.8, 'epsilon': 0.01},
     {'N': 30, 'f': 12, 'message_loss_rate': 0.05,
         'initial_ratio': 0.8, 'epsilon': 0.01},
@@ -29,3 +29,36 @@
  'initial_ratio': 0.8, 'epsilon': 0.01},
 {'N': 50, 'f': 15, 'message_loss_rate': 0.4,
  'initial_ratio': 0.8, 'epsilon': 0.01},
+
+# Configuration FOR DBAC 
+# FOR DBAC NODES_VS_ROUDS
+    {'N': 15, 'f': 2, 'message_loss_rate': 0.05,
+         'epsilon': 0.01},
+    {'N': 30, 'f': 4, 'message_loss_rate': 0.05,
+         'epsilon': 0.01},
+    {'N': 50,  'f': 9, 'message_loss_rate': 0.05,
+         'epsilon': 0.01},
+    {'N': 75, 'f': 14, 'message_loss_rate': 0.05,
+         'epsilon': 0.01},
+    {'N': 125, 'f': 24, 'message_loss_rate': 0.05,
+         'epsilon': 0.01},
+    {'N': 250, 'f': 49, 'message_loss_rate': 0.05,
+        'epsilon': 0.01}, 
+
+#  ROUNDS_VS_MESSAGE_LOSS_RATE
+    {'N': 50, 'f': 9, 'message_loss_rate': 0.05,
+  'epsilon': 0.01},
+    {'N': 50, 'f': 9, 'message_loss_rate': 0.1,
+  'epsilon': 0.01},
+    {'N': 50, 'f': 9, 'message_loss_rate': 0.15,
+  'epsilon': 0.01},
+    {'N': 50, 'f': 9, 'message_loss_rate': 0.2,
+  'epsilon': 0.01},
+  {'N': 50, 'f': 9, 'message_loss_rate': 0.25,
+  'epsilon': 0.01},
+    {'N': 50, 'f': 9, 'message_loss_rate': 0.3,
+        'epsilon': 0.01},
+    {'N': 50, 'f': 9, 'message_loss_rate': 0.35,
+        'epsilon': 0.01},
+    {'N': 50, 'f': 9, 'message_loss_rate': 0.4,
+        'epsilon': 0.01},
