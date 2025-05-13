@@ -1,0 +1,2342 @@
+[
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 55,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 55,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.1,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.1
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 55,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 60,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.2,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.2
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 55,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.3,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.3
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 55,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.4,
+            "epsilon": 0.001
+        },
+        "rounds": 55,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.4
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 56,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 57,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 59,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    },
+    {
+        "config": {
+            "N": 50,
+            "f": 15,
+            "message_loss_rate": 0.8,
+            "initial_ratio": 0.5,
+            "epsilon": 0.001
+        },
+        "rounds": 58,
+        "num_nodes": 50,
+        "message_loss_rate": 0.8,
+        "initial_ratio": 0.5
+    }
+]
